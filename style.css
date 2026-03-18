@@ -200,6 +200,51 @@ mark {
   border-radius: 4px;
 }
 
+/* GitHub tugmasi dizayni */
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #94a3b8;
+  background: #1e293b;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  transition: all 0.3s ease;
+}
+
+.github-link i {
+  font-size: 24px; /* Ikonka hajmi */
+}
+
+.github-link span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.github-link:hover {
+  background: #243353;
+  color: #f1f5f9;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* Mobilda GitHub yozuvini yashirib, faqat ikonkani qoldirish (joy tejash uchun) */
+@media (max-width: 600px) {
+  .github-link span {
+    display: none;
+  }
+  .github-link {
+    padding: 8px;
+  }
+}
+
+/* Navbarni biroz kengaytirish */
+.navbar {
+  padding: 10px 20px;
+}
+
 /* --- RESPONSIVE --- */
 
 /* Planshetlar (768px dan boshlab) - 2 ta ustun */
