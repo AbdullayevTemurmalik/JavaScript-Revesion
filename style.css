@@ -12,84 +12,23 @@ body {
   color: #f1f5f9;
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 1.6;
-  padding: 40px 20px;
 }
 
 .container {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px 40px 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #f8fafc;
-  margin-bottom: 10px;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.subtitle {
-  text-align: center;
-  color: #94a3b8;
-  margin-bottom: 40px;
-}
-
-#searchInput {
-  width: 100%;
-  padding: 16px 24px;
-  border-radius: 16px;
-  border: 1px solid #1e293b;
-  background: #0f172a;
-  color: white;
-  font-size: 18px;
-  outline: none;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* --- MENYU QISMI --- */
-.category-menu {
-  display: flex;
-  flex-wrap: wrap; /* Tugmalar sig'masa pastga tushadi */
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.menu-btn {
-  background: #1e293b;
-  color: #94a3b8;
-  border: 1px solid #334155;
-  padding: 10px 18px;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 500;
-}
-
-/* Logo wrapper */
-.logo-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.logo-wrapper:hover {
-  transform: scale(1.05); /* Bossang biroz kattalashadi */
-}
-
-/* Navbar qismi */
+/* --- NAVBAR VA LOGO --- */
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Logo chapda, menyu o'ngda/markazda */
-  padding: 20px 40px;
-  background: rgba(2, 6, 23, 0.8);
-  backdrop-filter: blur(10px); /* Orqa fon xiralashgan (modern) */
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(2, 6, 23, 0.9);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -97,64 +36,51 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Kichik va chiroyli JS ikonka */
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .js-icon {
   background-color: #f7df1e;
   color: #000;
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 4px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   border-radius: 6px;
-  cursor: pointer;
   transition: 0.3s;
 }
 
 .js-icon:hover {
-  transform: rotate(-5deg) scale(1.1);
+  transform: scale(1.1) rotate(-5deg);
   box-shadow: 0 0 20px rgba(247, 223, 30, 0.4);
 }
 
-/* Menyu navbar ichida chiroyli turishi uchun */
-.navbar .category-menu {
-  margin-bottom: 0; /* Ortqicha joyni yo'qotamiz */
-}
-
-/* Mobil qurilmalarda navbar dizayni */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px;
-  }
-}
-
-/* Saryiq kvadrat logo */
-.logo {
-  background-color: #f7df1e; /* JS rasmiy rangi */
-  color: #000;
-  width: 60px;
-  height: 60px;
+/* --- MENYU --- */
+.category-menu {
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  padding: 5px;
-  font-size: 24px;
-  font-weight: 900;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(247, 223, 30, 0.3);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
-.logo-text {
-  margin-top: 10px;
-  font-weight: 700;
-  color: #f7df1e;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
+.menu-btn {
+  background: #1e293b;
+  color: #94a3b8;
+  border: 1px solid #334155;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
 }
 
 .menu-btn.active,
@@ -164,48 +90,73 @@ h1 {
   border-color: #38bdf8;
 }
 
-/* --- NATIJALAR (FLEXBOX ASOSIDA) --- */
-#results {
-  display: flex;
-  flex-wrap: wrap; /* Elementlar keyingi qatorga o'tishi uchun */
-  gap: 20px;
-  justify-content: flex-start; /* Chapdan boshlab tiziladi */
+/* --- QIDIRUV VA SARLAVHA --- */
+h1 {
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f8fafc;
 }
 
-/* --- KARTOCKA O'LCHAMLARI (RESPONSIVE) --- */
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
 
-/* 1. Telefon (Default) - 1 ta ustun */
-.card {
-  flex: 1 1 100%; /* To'liq kenglikni oladi */
-  background: #1e293b;
-  padding: 20px;
+#searchInput {
+  width: 100%;
+  padding: 16px 24px;
   border-radius: 16px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: white;
+  font-size: 1.1rem;
+  outline: none;
+  margin-bottom: 40px;
+  transition: 0.3s;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15);
+}
+
+/* --- NATIJALAR (FLEXBOX) --- */
+#results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+/* --- KARTOCKA --- */
+.card {
+  background: #1e293b;
+  padding: 24px;
+  border-radius: 20px;
   border: 1px solid #334155;
   display: flex;
   flex-direction: column;
   min-height: 280px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Telefon uchun default (1 ta ustun) */
+  flex: 1 1 100%;
 }
 
-/* 2. Planshet (768px dan boshlab) - 2 ta ustun */
-@media (min-width: 768px) {
-  .card {
-    flex: 1 1 calc(50% - 20px); /* 50% kenglik, oradagi gapni hisobga olgan holda */
-  }
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #38bdf8;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
-/* 3. Notebook/Desktop (1200px dan boshlab) - 4 ta ustun */
-@media (min-width: 1200px) {
-  .card {
-    flex: 1 1 calc(25% - 20px); /* 25% kenglik */
-  }
-}
-
-/* Kartocka ichki qismlari */
 .card h3 {
   color: #38bdf8;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -215,23 +166,24 @@ h1 {
   font-size: 0.7rem;
   background: rgba(56, 189, 248, 0.1);
   color: #38bdf8;
-  padding: 2px 10px;
+  padding: 4px 10px;
   border-radius: 20px;
   border: 1px solid rgba(56, 189, 248, 0.2);
 }
 
 .card p {
   color: #94a3b8;
-  font-size: 0.9rem;
-  margin-bottom: 15px;
-  flex-grow: 1; /* Tavsif joyni egallab, kod blokini pastga suradi */
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .card pre {
   background: #000;
-  padding: 12px;
-  border-radius: 10px;
+  padding: 16px;
+  border-radius: 12px;
   overflow-x: auto;
+  border: 1px solid #1e293b;
 }
 
 .card code {
@@ -240,7 +192,7 @@ h1 {
   font-size: 0.85rem;
 }
 
-/* Qidiruvda bo'yash */
+/* Qidiruv bo'yash */
 mark {
   background: rgba(56, 189, 248, 0.3);
   color: #38bdf8;
@@ -248,11 +200,36 @@ mark {
   border-radius: 4px;
 }
 
-/* Ma'lumot matnlari */
-.info-text,
-.no-result {
-  width: 100%;
-  text-align: center;
-  color: #64748b;
-  padding: 50px;
+/* --- RESPONSIVE --- */
+
+/* Planshetlar (768px dan boshlab) - 2 ta ustun */
+@media (min-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Notebook/Desktop (1200px dan boshlab) - 4 ta ustun */
+@media (min-width: 1200px) {
+  .card {
+    flex: 1 1 calc(25% - 20px);
+  }
+}
+
+/* Telefonlar uchun maxsus (Navbar va Menyu) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .menu-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }
