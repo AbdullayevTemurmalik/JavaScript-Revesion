@@ -1,0 +1,81 @@
+export const arrays = [
+  // Sen yozganlar: map, filter, push, forEach, find... (ularni saqlab qol)
+  {
+    id: 6,
+    title: "Array.pop()",
+    category: "Arrays",
+    desc: "Massivning oxirgi elementini olib tashlaydi va o'sha elementni qaytaradi.",
+    example: "const arr = [1, 2, 3];\narr.pop(); // [1, 2]",
+  },
+  {
+    id: 7,
+    title: "Array.shift()",
+    category: "Arrays",
+    desc: "Massivning birinchi elementini olib tashlaydi.",
+    example: "const arr = [1, 2, 3];\narr.shift(); // [2, 3]",
+  },
+  {
+    id: 8,
+    title: "Array.unshift()",
+    category: "Arrays",
+    desc: "Massivning boshiga yangi element qo'shadi.",
+    example: "const arr = [1, 2];\narr.unshift(0); // [0, 1, 2]",
+  },
+  {
+    id: 9,
+    title: "Array.reduce()",
+    category: "Arrays",
+    desc: "Massiv elementlarini bitta qiymatga keltirish uchun ishlatiladi (masalan, yig'indi hisoblash).",
+    example: "const sum = [1, 2, 3].reduce((acc, curr) => acc + curr, 0); // 6",
+  },
+  {
+    id: 10,
+    title: "Array.slice()",
+    category: "Arrays",
+    desc: "Massivning ma'lum bir qismini nusxalab oladi (asl massiv o'zgarmaydi).",
+    example:
+      "const arr = [1, 2, 3, 4];\nconst newArr = arr.slice(1, 3); // [2, 3]",
+  },
+  {
+    id: 11,
+    title: "Array.splice()",
+    category: "Arrays",
+    desc: "Massivga element qo'shish, o'chirish yoki almashtirish uchun ishlatiladi (asl massiv o'zgaradi).",
+    example: "const arr = [1, 2, 3];\narr.splice(1, 1, 'x'); // [1, 'x', 3]",
+  },
+  {
+    id: 12,
+    title: "Array.includes()",
+    category: "Arrays",
+    desc: "Massiv ichida ma'lum bir element bor yoki yo'qligini tekshiradi (true/false qaytaradi).",
+    example: "[1, 2, 3].includes(2); // true",
+  },
+  {
+    id: 13,
+    title: "Array.indexOf()",
+    category: "Arrays",
+    desc: "Elementning massivdagi birinchi uchragan indeksini qaytaradi, topilmasa -1 qaytaradi.",
+    example: "['olma', 'anor'].indexOf('anor'); // 1",
+  },
+  {
+    id: 14,
+    title: "Array.sort()",
+    category: "Arrays",
+    desc: "Massiv elementlarini tartiblaydi (alfavit yoki sonlar bo'yicha).",
+    example: "[3, 1, 2].sort(); // [1, 2, 3]",
+  },
+  {
+    id: 15,
+    title: "Array.join()",
+    category: "Arrays",
+    desc: "Massiv elementlarini bitta string (matn) qilib birlashtiradi.",
+    example: "['JS', 'zor'].join(' '); // 'JS zor'",
+  },
+  {
+    id: 16,
+    title: "Array.reverse()",
+    category: "Arrays",
+    desc: "Massiv elementlarining ketma-ketligini teskarisiga aylantiradi.",
+    example: "[1, 2, 3].reverse(); // [3, 2, 1]",
+  },
+];

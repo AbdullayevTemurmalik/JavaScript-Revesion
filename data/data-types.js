@@ -1,0 +1,58 @@
+export const dataTypes = [
+  {
+    id: 1,
+    title: "String",
+    category: "Data Types",
+    desc: "Matnli ma'lumot turi. Qo'shtirnoq (' ', \" \" yoki ` `) ichida yoziladi.",
+    example: "let name = 'TemurMalik';\nlet city = \"Xorazm\";",
+  },
+  {
+    id: 2,
+    title: "Number",
+    category: "Data Types",
+    desc: "Barcha sonlar (butun va o'nlik sonlar) uchun ishlatiladi.",
+    example: "let age = 16;\nlet price = 12500.50;",
+  },
+  {
+    id: 3,
+    title: "Boolean",
+    category: "Data Types",
+    desc: "Mantiqiy tur: faqat true (rost) yoki false (yolg'on) qiymat oladi.",
+    example: "let isStudent = true;\nlet isGraduated = false;",
+  },
+  {
+    id: 4,
+    title: "Undefined",
+    category: "Data Types",
+    desc: "O'zgaruvchi e'lon qilingan, lekin unga qiymat berilmagan holat.",
+    example: "let x;\nconsole.log(x); // undefined",
+  },
+  {
+    id: 5,
+    title: "Null",
+    category: "Data Types",
+    desc: "Qiymatning ataylab 'bo'sh' yoki 'mavjud emas' qilib belgilanishi.",
+    example: "let user = null;",
+  },
+  {
+    id: 6,
+    title: "BigInt",
+    category: "Data Types",
+    desc: "Number turidan ham kattaroq butun sonlarni saqlash uchun ishlatiladi.",
+    example: "let bigNumber = 9007199254740991n;",
+  },
+  {
+    id: 7,
+    title: "Symbol",
+    category: "Data Types",
+    desc: "Obyektlar uchun noyob (unique) identifikatorlar yaratishda ishlatiladi.",
+    example: "let id = Symbol('id');",
+  },
+  {
+    id: 8,
+    title: "Object",
+    category: "Data Types",
+    desc: "Murakkab ma'lumot strukturasi. O'zida kalit-qiymat (key-value) juftliklarini saqlaydi.",
+    example: "const user = {\n  name: 'Temur',\n  age: 16\n};",
+  },
+];
